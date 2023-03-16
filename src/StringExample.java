@@ -23,6 +23,16 @@ public class StringExample {
 
         System.out.println(obj == obj1);  //F
         System.out.println(obj.equals(obj1)); //F
+
+        System.out.println(obj);
+        System.out.println(obj1);
+    }
+
+    @Override
+    public String toString() {
+        return "StringExample{" +
+                "name='" + name + '\'' +
+                '}';
     }
 
     @Override
