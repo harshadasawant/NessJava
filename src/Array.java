@@ -57,5 +57,30 @@ String name;
         }
         System.out.println();
         System.out.println(arr1 == cloneArr);
+
+        System.out.println("==============3D Array==================");
+        int threeD [][][]={
+                {
+                        {1,2,4},
+                        {4,5,6}
+                },
+                {
+                        {7,4,3},
+                        {4,7},
+                        {7,4,2}
+                }
+        };
+        for(int i=0;i< threeD.length;i++){
+            for(int j=0;j<threeD[i].length;j++){
+                for(int k=0;k<threeD[i][j].length;k++){
+                    System.out.print(threeD[i][j][k]+", ");
+                }
+                System.out.println();
+
+            }
+            System.out.println();
+            System.out.println();
+        }
+
     }
 }
