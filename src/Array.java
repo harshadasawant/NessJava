@@ -48,7 +48,14 @@ String name;
         for(int ar:arr){
             System.out.print(ar+", ");
         }
-
-
+        System.out.println();
+        System.out.println("=================clonning Array=============");
+        int arr1[]={5,4,2,3};
+        int cloneArr[] = arr1.clone();
+        for(int c:cloneArr){
+            System.out.print(c +", ");
+        }
+        System.out.println();
+        System.out.println(arr1 == cloneArr);
     }
 }
