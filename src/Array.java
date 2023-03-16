@@ -1,5 +1,7 @@
-public class Array {
+import java.util.Arrays;
 
+public class Array {
+String name;
     public static void main(String[] args) {
         int a[] = new int[5];
         a[0]=1;
@@ -39,5 +41,14 @@ public class Array {
             System.out.println();
 
         }
+        System.out.println("================sort==================");
+
+        int arr[]={4,3,7,8,2,1};
+        Arrays.sort(arr);
+        for(int ar:arr){
+            System.out.print(ar+", ");
+        }
+
+
     }
 }
