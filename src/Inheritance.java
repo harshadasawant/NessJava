@@ -9,6 +9,10 @@ abstract class SuperClass{
     abstract void disp();
 
 }
+
+class AB{
+
+}
 public class Inheritance extends SuperClass{
 
    public void display()   {
