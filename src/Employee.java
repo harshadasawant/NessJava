@@ -2,16 +2,23 @@
 public class Employee {
 static String company;
 String employee_Name;
+Employee(String name){
+    employee_Name =name;
+}
+Employee(){
+
+}
 
  static void display(){
+     System.out.println(company);
     System.out.println("Called from Employee Class");
 }
-static {
-    System.out.println("I am called first");
-}
-    {
-        System.out.println("Normal instance block");
-    }
+//static {
+//    System.out.println("I am called first");
+//}
+//    {
+//        System.out.println("Normal instance block");
+//    }
     public static void main(String[] args) {
         Employee e1 = new Employee();
         e1.employee_Name="Harshada";
