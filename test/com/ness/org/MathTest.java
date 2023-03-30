@@ -2,6 +2,8 @@ package com.ness.org;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 //Expected value -  Assuming
@@ -23,6 +25,18 @@ class MathTest {
         Math obj  = new Math();
         int ans = obj.sub(5,3);
         assertEquals(2,ans);
+    }
 
+    @Test
+    void testAssert(){
+        String s =null;
+       assertNull(s);
+    }
+    @Test
+    void testAssertThrows(){
+        String s =null;
+        assertThrows(NullPointerException.class, ()->{
+            s.hashCode();
+        });
     }
 }
