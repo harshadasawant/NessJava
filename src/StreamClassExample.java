@@ -1,11 +1,42 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamClassExample {
+    static void intermediateTerminateOperation(){
+        List<Integer> li = new ArrayList<Integer>();
+        li.add(3);
+        li.add(1);
+        li.add(4);
+        li.add(8);
+        li.add(2);
+        li.add(10);
+        li.add(10);
+        li.add(10);
+//sorted, distict, filter, map
+        li.stream().filter(t->  t%2==0).sorted().distinct().map(e->e*e).forEach(a->{
+            System.out.println(a);
+        });
+        System.out.println("===================");
+//        count
+       long l =  li.stream().filter(t->  t%2==0).sorted().distinct().map(e->e*e).count();
+        System.out.println("no of element = "+l);
+//        reduce()
+       Optional<Integer> op= li.stream().reduce((a1, b)-> a1+b);
+        System.out.println("value = "+op.get());
+
+//collect
+        List<Integer> li1 = li.stream().collect(Collectors.toList());
+        System.out.println("==========List started ====================");
+        for(int i: li1) {
+            System.out.println(i);
+        }
+        System.out.println("=======================");
+
+
+    }
     public static void main(String[] args) {
+        intermediateTerminateOperation();
 //       1st way
         Stream st = Stream.empty();
 //        2nd way
@@ -15,7 +46,6 @@ public class StreamClassExample {
         li.add(4);
         li.add(8);
         Stream stream = li.stream();
-        System.out.println(stream);
 
         stream.forEach(a->{
             System.out.println(a);
