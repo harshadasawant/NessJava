@@ -49,7 +49,7 @@ class Triangle implements Shape {
     }
 }
 
-class ShapeFactory {
+class ShapeFactory extends AbstractFactory {
     public Shape getShape(String shape) {
         if (shape.equalsIgnoreCase("Rectangle")) {
             return new Rectangle();
@@ -62,7 +62,13 @@ class ShapeFactory {
         }
         return null;
     }
+
+    @Override
+    public Area getArea(String areaOfShape) {
+        return null;
+    }
 }
+
 
 public class FactoryDesignPattern {
     public static void main(String[] args) {
